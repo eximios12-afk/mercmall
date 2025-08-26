@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mercmall</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #000;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #e91e63; /* Instagram pink-ish highlight */
+    }
+    main {
+      padding-top: 80px; /* To offset fixed header */
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 20px 40px;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    h1, h2 {
+      color: #000;
+      margin-bottom: 20px;
+    }
+    .banner {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: white;
+      border-radius: 12px;
+      margin-bottom: 60px;
+    }
+    .products {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .product-card {
+      background: #fafafa;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      width: 280px;
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .product-card h3 {
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    form {
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #e91e63;
+      box-shadow: 0 0 5px #e91e63;
+    }
+    button {
+      background: #e91e63;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #bc1850;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
+    }
+    @media(max-width: 600px) {
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        margin-left: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://via.placeholder.com/150x50?text=Mercmall+Logo" alt="Mercmall Logo" />
+    <nav>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner">
+      <h1>Welcome to Mercmall</h1>
+      <p>Your one-stop shop for amazing products</p>
+    </section>
+
+    <section id="about">
+      <h2>About Mercmall</h2>
+      <p>Mercmall is dedicated to bringing you quality products curated with passion. Follow us on Instagram for updates and new arrivals!</p>
+    </section>
+
+    <section id="products">
+      <h2>Featured Products</h2>
+      <div class="products">
+        <div class="product-card">
+          <img src="https://via.placeholder.com/280x200?text=Product+1" alt="Product 1" />
+          <h3>Product 1</h3>
+          <p>High-quality product description goes here.</p>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/280x200?text=Product+2" alt="Product 2" />
+          <h3>Product 2</h3>
+          <p>High-quality product description goes here.</p>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/280x200?text=Product+3" alt="Product 3" />
+          <h3>Product 3</h3>
+          <p>High-quality product description goes here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Mercmall. All rights reserved.
+  </footer>
+
+</body>
+</html>
