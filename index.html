@@ -58,10 +58,24 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
             font-size: 1.8rem;
             font-weight: bold;
             text-decoration: none;
             color: white;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
         }
 
         .nav-links {
@@ -429,7 +443,10 @@
 <body>
     <header>
          <nav>
-              <a href="#" font="Sanggar" class="logo"> Mercmall</a>
+               <a href="#" class="logo">
+                <img src="Mercmall.png" alt="Mercmall Logo" onerror="this.style.display='none'; this.nextElementSibling.innerHTML='🎨 Sanggar'">
+                <span class="logo-text">Sanggar</span>
+            </a>
                <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
